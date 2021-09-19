@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            overflow: auto;
+
+        }
+        .nav {
+            /* to make nav display as flex */
+            display: flex;
+            flex-wrap: wrap;
+            height: auto;
+            background-color: rgb(28, 28, 74);
+            justify-content: space-between;
+
+
+        }
+        
+
+        .nav ul li{
+            /* to disapper dots */
+            list-style: none; 
+            /* li is a block element so to make them all appear in one colums display equals to inline-block */
+            display: inline-block;
+            /* justify-content:  space-between made both into opp end and squeezed so to make it more representable margin left-right has been increased */
+            margin: 0px 14px;
+        }
+
+        .bttn {
+            background-color: inherit;
+            color: rgb(215, 247, 104);
+            border: none;
+            font-size: medium;
+        }
+
+        .container{
+            display: flex;
+            height: 860px;
+            justify-content: center;
+            background-color: #041d2fc2;
+        }
+
+        .flex-bar-container{
+            /* position relative will act as a refferenve for it's child elements for position absolute */
+            position: relative;
+            overflow: auto;
+            width: 40px;
+        }
+
+        .bars-elements{
+            position: absolute;
+            display: inline-block;
+            border: 2px solid black;
+            overflow: auto;
+            text-align: center;
+            background-color: #efc738;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        
+        <div class="nav_item" id="left">
+            <ul class="left_nav">
+                <li>
+                    <button class="bttn" onclick="sort()">
+                        Go
+                    </button>
+                </li>
+                <li>
+                    <button class="bttn" onclick="create()">Create</button>
+                </li>
+                <li>
+                    <input type="range" name="Speed" class="speed-slider" min='1' max='10' value='6'>
+                </li>
+                <li>
+                    <input type="range" name="bars" class="bar-slider" min='1' max='5' value='2'>
+                </li>
+            </ul>
+        </div>
+
+        <div class="nav_item" id="right">
+            <ul>
+                <li><button class="bttn" id="sort-1" onclick="select('sort-1')">
+                        Selection Sort
+                    </button>
+                </li>
+                <li>
+                    <button class="bttn" id="sort-2" onclick="select('sort-2')">
+                        Bubble Sort
+                    </button>
+                </li>
+                <li>
+                    <button class="bttn" id="sort-3" onclick="select('sort-3')">
+                        Insertion Sort
+                    </button>
+                </li>
+                <li>
+                    <button class="bttn" id="sort-4" onclick="select('sort-4')">
+                        Merge Sort
+                    </button>
+                </li>
+                <li>
+                    <button class="bttn" id="sort-5" onclick="select('sort-5')"> 
+                        Quick Sort Lumoto'
+                    </button> 
+                </li>
+                <li>
+                    <button class="bttn" id="sort-6" onclick="select('sort-6')">
+                        Quick Sort Hoare's
+                    </button>
+                </li>
+                
+            </ul>
+        </div> 
+
+
+    </nav>
+    <div class="container">
+        <div class="flex-bar-container">
+            
+            
+        </div>
+    </div>
+    <script src="sorting-visualizer.js"></script>
+</body>
+
+</html>
+
+
